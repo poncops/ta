@@ -1,0 +1,26 @@
+install bahan-bahan :
+
+php 8 => https://www.youtube.com/watch?v=MPRLUd8Pmyo&ab_channel=GeekyScript
+composer => https://getcomposer.org/Composer-Setup.exe
+xampp => https://onboardcloud.dl.sourceforge.net/project/xampp/XAMPP%20Windows/8.0.28/xampp-windows-x64-8.0.28-0-VS16-installer.exe
+
+
+------------------------------------------
+
+buat database di phpmyadmin sesuai dengan kemauan misal (supermarket)
+
+setting di .env nya
+
+jalankan command ini satu satu
+
+composer install
+php artisan migrate
+php artisan db:seed
+php artisan storage:link
+
+# pindah folder image ke hasil link storagenya
+
+lalu 
+php artisan serve
+
+
