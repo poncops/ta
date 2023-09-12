@@ -58,17 +58,17 @@
                     <h2>Why Choose Us</h2>
                 </div>
                 <br>
-                <div class="services-wrapper mt-40">
-                    <div class="single-services mb-40">
+                <div class="row mt-40">
+                    <div class="single-services col-md-4 mb-40">
                         <div class="services-img">
                             <img src="{{ asset('frontend/assets/img/icon-img/26.png') }}" alt="">
                         </div>
                         <div class="services-content">
                             <h4>Free Shippig</h4>
-                            <p>Contrary to popular belief, Lorem Ipsum is random text. </p>
+                            <p>Khusus pengiriman Surabaya free ongkir dengan minimal belanja Rp200.000</p>
                         </div>
                     </div>
-                    <div class="single-services mb-40">
+                    <div class="single-services col-md-4 mb-40">
                         <div class="services-img">
                             <img src="{{ asset('frontend/assets/img/icon-img/27.png') }}" alt="">
                         </div>
@@ -77,13 +77,16 @@
                             <p>Contrary to popular belief, Lorem Ipsum is random text. </p>
                         </div>
                     </div>
-                    <div class="single-services mb-40">
+                    <div class="single-services col-md-4 mb-40"> 
                         <div class="services-img">
                             <img src="{{ asset('frontend/assets/img/icon-img/28.png') }}" alt="">
                         </div>
-                        <div class="services-content">
+                        <div class="services-content" >
                             <h4>Secure Payments</h4>
-                            <p>Contrary to popular belief, Lorem Ipsum is random text. </p>
+                            <h5>KONFIRMASI PEMBAYARAN</h5>
+                            <p>bagi yang order via website
+                               untuk customer PEMBAYARAN Transfer antar Bank disertai Nama Rekening. 
+                               Setalah Checkout, PEMBAYARAN akan diCheck kembali oleh Admin.</p>
                         </div>
                     </div>
                 </div>

@@ -228,7 +228,7 @@
                                     <span>Address: </span>
                                 </div>
                                 <div class="footer-info-content3">
-                                    <p>66 Sipu road Rampura Banasree <br>USA- 10800</p>
+                                    <p>Jl. Arief Rahman Hakim No.32, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur 60111</p>
                                 </div>
                             </div>
                             <div class="footer-address-furniture">
@@ -236,7 +236,7 @@
                                     <span>Phone: </span>
                                 </div>
                                 <div class="footer-info-content3">
-                                    <p>+8801 (33) 515609735 <br>+8801 (66) 223352333</p>
+                                    <p>(031) 5926020</p>
                                 </div>
                             </div>
                             <div class="footer-address-furniture">
@@ -244,12 +244,12 @@
                                     <span>E-mail: </span>
                                 </div>
                                 <div class="footer-info-content3">
-                                    <p><a href="#"> email@domain.com</a> <br><a href="#"> domain@mail.info</a></p>
+                                    <p><a href="#"> www.sakianahmart.com</a> </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="footer-widget mb-30">
+                    <!-- <div class="footer-widget mb-30">
                         <h3 class="footer-widget-title-5">Newsletter</h3>
                         <div class="footer-newsletter-2">
                             <p>Send us your mail or next updates</p>
@@ -261,7 +261,7 @@
                                     <div id="mc_embed_signup_scroll" class="mc-form">
                                         <input type="email" value="" name="EMAIL" class="email"
                                             placeholder="Enter mail address" required>
-                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                        
                                         <div class="mc-news" aria-hidden="true"><input type="text"
                                                 name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value="">
                                         </div>
@@ -272,7 +272,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="footer-bottom ptb-20 gray-bg-8">
