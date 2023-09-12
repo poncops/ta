@@ -44,7 +44,7 @@ class SlideController extends Controller
     {
         $image = NULL;
         if ($request->hasFile('cover')) {
-            $image = $this->uploadImage($request->title, $request->cover, 'slides', 500, 500);
+            $image = $this->uploadOriginalImage($request->title, $request->cover, 'slides');
         }
 
         Slide::create([
@@ -97,7 +97,7 @@ class SlideController extends Controller
             if ($slide->cover != null && File::exists('storage/images/slides/'. $slide->cover)) {
                 unlink('storage/images/slides/'. $slide->cover);
             }
-            $image = $this->uploadImage($request->title, $request->cover, 'slides', 450, 450);
+            $image = $this->uploadOriginalImage($request->title, $request->cover, 'slides');
         }
 
         $slide->update([

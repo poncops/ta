@@ -20,6 +20,15 @@ trait ImageUploadTrait
         return $image_name;
     }
 
+    public function uploadOriginalImage($name, $img, $folderName): string
+    {
+        $image_name = $this->imageName($name, $img);
+
+        Image::make($img->getRealPath())->save(storage_path($this->path.$folderName.'/'.$image_name), 100);
+
+        return $image_name;
+    }
+
     public function uploadImages($name, $img, $i, $folderName, $image_width = null, $image_height = null): string
     {
         $image_name = $this->randomImageName($name, $img, $i);
