@@ -51,12 +51,17 @@
                 <li>
                     <div class="post-wrapper d-flex">
                         <div class="mb-2">
-                            <img src="https://ui-avatars.com/api/?name={{ $recent_review->user->name }}&background=0d8abc&color=fff" alt="{{ $recent_review->name }}">
+                            @if($recent_review->user && $recent_review->user->foto)
+                                <img style="width:45px;" src="{{ asset('storage/images/users/' . $recent_review->user->foto) }}" alt="" width="50">
+                            @else
+                                <img class="rounded-circle" style="width:45px; border:1px solid #dedede;" src="{{ asset('frontend/assets/img/user.png') }}" alt="{{ $recent_review->first_name }}">
+                            @endif
+                            <!-- <img src="https://ui-avatars.com/api/?name={{ $recent_review->user->name }}&background=0d8abc&color=fff" alt="{{ $recent_review->name }}"> -->
                         </div>
                         <div class="ml-3 p-0">
                             @if(isset($recent_review->product->slug))
                                 <p>
-                                    <span class="">{{ $recent_review->user->name }}</span>
+                                    <span class="">{{ $recent_review->user->first_name ? $recent_review->user->first_name.' '.$recent_review->user->last_name : $recent_review->user->username }} </span>
                                     <small class="text-success"> review on :
                                         {{ $recent_review->product->name }}
                                     </small>

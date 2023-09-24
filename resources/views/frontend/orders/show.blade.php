@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('title', 'Order - ' . $order->code)
 @section('content')
-	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('frontend/assets/img/bg/breadcrumb.jpg') }})">
+	<div class="breadcrumb-area breadcrumb-padding bg-breadcrumb" style="background-image: url({{ asset('frontend/assets/img/sakinah_mart.png') }})">
 		<div class="container-fluid">
 			<div class="breadcrumb-content text-center">
 				<h2>My Favorites</h2>
@@ -21,7 +21,7 @@
                         <ul>
                             <li><a href="{{ url('profile') }}">Profile</a></li>
                             <li><a href="{{ url('orders') }}">Orders</a></li>
-                            <li><a href="{{ url('favorites') }}">Favorites</a></li>
+                            <li><a href="{{ url('favorite') }}">Favorites</a></li>
                         </ul>
                     </div>
 				</div>

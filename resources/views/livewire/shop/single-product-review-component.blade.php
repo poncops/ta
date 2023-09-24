@@ -5,10 +5,10 @@
             <li>
                 <div class="wn__comment d-flex" style="column-gap: 1rem;">
                     <div class="">
-                        @if($review->user && $review->user->user_image)
-                        <img class="rounded-circle" src="{{ asset('storage/images/users/' . $review->user->user_image) }}" alt="" width="50">
+                        @if($review->user && $review->user->foto)
+                        <img style="width:45px; border:1px solid #dedede;" src="{{ asset('storage/images/users/' . $review->user->foto) }}" alt="" width="50">
                         @else
-                        <img src="https://ui-avatars.com/api/?name={{ $review->user->name }}&background=0d8abc&color=fff" alt="{{ $review->name }}">
+                        <img class="rounded-circle" style="width:45px; border:1px solid #dedede;" src="{{ asset('frontend/assets/img/user.png') }}" alt="{{ $review->first_name }}">
                         @endif
                     </div>
                     <div class="content d-flex" style="column-gap: 2rem;">

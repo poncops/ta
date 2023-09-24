@@ -38,7 +38,7 @@ Route::resource('cart', \App\Http\Controllers\CartController::class)->only(['ind
 Route::group(['middleware' => 'auth'], function() {
 
     Route::get('profile', [\App\Http\Controllers\Auth\ProfileController::class, 'index'])->name('profile.index');
-    Route::put('profile', [\App\Http\Controllers\Auth\ProfileController::class, 'update'])->name('profile.update');
+    Route::post('profile', [\App\Http\Controllers\Auth\ProfileController::class, 'update'])->name('profile.update');
 
     Route::get('orders/checkout', [\App\Http\Controllers\OrderController::class, 'process'])->name('checkout.process');
     Route::get('orders/cities', [\App\Http\Controllers\OrderController::class, 'cities']);
