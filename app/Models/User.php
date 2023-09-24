@@ -28,7 +28,8 @@ class User extends Authenticatable
         'address2',
         'province_id',
         'city_id',
-        'postcode'
+        'postcode',
+        'foto'
     ];
 
     /**

@@ -5,12 +5,12 @@
      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">       
             <div class="carousel-inner">
                 @foreach($slides as $key => $slide)
-                    <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
+                    <div class="carousel-item {{$key == 0 ? 'active' : '' }}" style="height: 513px !important;">
                         <img src="{{ Storage::url('images/slides/'. $slide->cover) }}" class="d-block w-100" alt="{{ $slide->title }}">
                         <div class="carousel-caption d-none d-md-block">
                             <h5 class="text-white">{{ $slide->title }}</h5>
-                            <p>{!! $slide->body !!}</p>
-                            <a class="furniture-slider-btn btn-hover animated text-white" style="border: 1px solid #fff;" href="{{ $slide->url }}">Go</a>
+                            <p class="text-white">{!! $slide->body !!}</p>
+                            <a class="furniture-slider-btn btn-hover animated text-white" target="_blank" style="border: 1px solid #fff;" href="{{ $slide->url }}">Go</a>
                         </div>
                     </div>    
                 @endforeach

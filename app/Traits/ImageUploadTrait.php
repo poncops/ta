@@ -20,6 +20,20 @@ trait ImageUploadTrait
         return $image_name;
     }
 
+    public function uploadOriginalImage($name, $img, $folderName): string
+    {
+        $image_name = $this->imageName($name, $img);
+        Image::make($img->getRealPath())->save(storage_path($this->path.$folderName.'/'.$image_name), 100);
+        return $image_name;
+    }
+
+    public function uploadImg($name, $img, $folderName): string
+    {
+        $image_name = $this->randomImgName($name, $img);
+        Image::make($img->getRealPath())->save(storage_path($this->path.$folderName.'/'.$image_name), 100);
+        return $image_name;
+    }
+
     public function uploadImages($name, $img, $i, $folderName, $image_width = null, $image_height = null): string
     {
         $image_name = $this->randomImageName($name, $img, $i);
@@ -40,5 +54,10 @@ trait ImageUploadTrait
     protected function randomImageName($imageName, $image, $i): string
     {
         return Str::slug($imageName) . time() . '-' . $i . '.' . $image->getClientOriginalExtension();
+    }
+
+    protected function randomImgName($imageName, $image): string
+    {
+        return Str::slug($imageName) . '_' . time() . '.' . $image->getClientOriginalExtension();
     }
 }

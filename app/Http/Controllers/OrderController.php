@@ -30,8 +30,13 @@ class OrderController extends Controller
 
 		// $provinces = [1,2,3,4,5];
 		// $cities = [1,2,3,4,5];
+		$user = auth()->user();
 		$provinces = $this->getProvinces();
 		$cities = [];
+		if ($user->province_id) {
+			$cities = $this->getCities($user->province_id);
+		}
+
 		$rekenings = Rekening::get(['id', 'bank_name', 'acc_number', 'name']);
 
 		return view('frontend.orders.checkout', compact('items','totalWeight', 'provinces', 'cities', 'rekenings'));

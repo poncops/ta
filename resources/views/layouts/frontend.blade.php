@@ -208,8 +208,9 @@
     @yield('content')
 
     <!-- footer -->
+    <hr>
     <footer class="footer-area">
-        <div class="footer-top-area pt-70 pb-35 wrapper-padding-5">
+        <div class="footer-top-area pb-35 wrapper-padding-5">
             <div class="container-fluid">
                 <div class="widget-wrapper">
                     <div class="footer-widget mb-30">
@@ -271,8 +272,8 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
-                </div> -->
+                    </div> -->
+                </div>
             </div>
         </div>
         <div class="footer-bottom ptb-20 gray-bg-8">
@@ -280,7 +281,7 @@
                 <div class="row">
                     <div class="col-12 text-center">
                         <div class="copyright-furniture">
-                            <p>Copyright © <a href="https://cycologyittelkomsby.com/">Rayss</a> 2023 . All Right Reserved.</p>
+                            <p>Copyright © <a href="https://cycologyittelkomsby.com/">Sakinah Mart</a> 2023 . All Right Reserved.</p>
                         </div>
                     </div>
                 </div>
@@ -339,8 +340,7 @@
                     '<div class="list-group search-results-dropdown">'
                 ],
                 suggestion: function(data) {
-                    return '<div style="font-weight:normal; width:100%" class="list-group-item"><a href="{{url('
-                    product ')}}/' + data.slug + '">' + data.name + '</a></div></div>'
+                    return '<div style="font-weight:normal; width:100%" class="list-group-item"><a href="{{url("product")}}/' + data.slug + '">' + data.name + '</a></div></div>'
                 }
             }
         });

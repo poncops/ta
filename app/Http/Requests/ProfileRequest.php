@@ -34,6 +34,7 @@ class ProfileRequest extends FormRequest
             'postcode' => ['required'],
             'phone' => ['required'],
             'email' => ['required', 'string', 'max:255', 'unique:users,email,' . auth()->id()],
+            'foto' => ['nullable','mimes:jpg,jpeg,png,gif', 'max:20000'],
         ];
     }
 }
