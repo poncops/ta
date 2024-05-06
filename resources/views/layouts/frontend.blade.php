@@ -50,7 +50,7 @@
                             <div style="display: flex; align-items: center;">
                                 <img height="60" style="transform: scale(1.5); object-fit: cover;"
                                     src="{{ asset('frontend/assets/img/logo/logo1.png') }}" alt="">
-                                <h3 style="margin-left: 10px;">Sakinah Store</h3>
+                                <h3 style="margin-left: 10px;"></h3>
                             </div>
 
                         </a>

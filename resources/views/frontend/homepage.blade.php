@@ -65,7 +65,7 @@
                         </div>
                         <div class="services-content">
                             <h4>Free Shippig</h4>
-                            <p>Khusus pengiriman Surabaya free ongkir dengan minimal belanja Rp200.000</p>
+                            <p></p>
                         </div>
                     </div>
                     <div class="single-services col-md-4 mb-40">
@@ -74,7 +74,7 @@
                         </div>
                         <div class="services-content">
                             <h4>24/7 Support</h4>
-                            <p>Contrary to popular belief, Lorem Ipsum is random text. </p>
+                            <p></p>
                         </div>
                     </div>
                     <div class="single-services col-md-4 mb-40"> 
@@ -83,10 +83,8 @@
                         </div>
                         <div class="services-content" >
                             <h4>Secure Payments</h4>
-                            <h5>KONFIRMASI PEMBAYARAN</h5>
-                            <p>bagi yang order via website
-                               untuk customer PEMBAYARAN Transfer antar Bank disertai Nama Rekening. 
-                               Setalah Checkout, PEMBAYARAN akan diCheck kembali oleh Admin.</p>
+                            <h5></h5>
+                            <p></p>
                         </div>
                     </div>
                 </div>
