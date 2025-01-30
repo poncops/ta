@@ -5,7 +5,7 @@
     <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('Shipments') }}
+                    {{ __('Pengiriman') }}
                 </h6>
             </div>
             <div class="table-responsive">
@@ -13,12 +13,12 @@
                     <thead>
                     <tr>
                         <th>No</th>
-                        <th>Order ID</th>
-                        <th>Name</th>
+                        <th>Pesanan ID</th>
+                        <th>Nama</th>
                         <th>Status</th>
                         <th>Total Qty</th>
-                        <th>Total Weight (gram)</th>
-                        <th class="text-center" style="width: 30px;">Action</th>
+                        <th>Total Barat (gram)</th>
+                        <th class="text-center" style="width: 30px;">Aksi</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -50,7 +50,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td class="text-center" colspan="12">No products found.</td>
+                            <td class="text-center" colspan="12">Tidak ada produk yang ditemukan.</td>
                         </tr>
                     @endforelse
                     </tbody>

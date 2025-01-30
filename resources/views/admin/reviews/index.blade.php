@@ -5,7 +5,7 @@
     <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('Reviews') }}
+                    {{ __('Ulasan') }}
                 </h6>
             </div>
             <div class="table-responsive">
@@ -13,13 +13,13 @@
                     <thead>
                     <tr>
                         <th>No</th>
-                        <th>Name</th>
-                        <th>Content</th>
+                        <th>Nama</th>
+                        <th>Konten</th>
                         <th>Rating</th>
-                        <th>Product</th>
+                        <th>Produk</th>
                         <th>Status</th>
-                        <th>Created at</th>
-                        <th class="text-center" style="width: 30px;">Action</th>
+                        <th>DiBuat</th>
+                        <th class="text-center" style="width: 30px;">Aksi</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -42,7 +42,7 @@
                                     <a href="{{ route('admin.reviews.edit', $review) }}" class="btn btn-sm btn-primary">
                                         <i class="fa fa-edit"></i>
                                     </a>
-                                    <form onclick="return confirm('are you sure !')" action="{{ route('admin.reviews.destroy', $review) }}"
+                                    <form onclick="return confirm('apa kamu yakin !')" action="{{ route('admin.reviews.destroy', $review) }}"
                                     method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -53,7 +53,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td class="text-center" colspan="9">No reviews found.</td>
+                            <td class="text-center" colspan="9">Tidak ada ulasan yang ditemukan.</td>
                         </tr>
                     @endforelse
                     </tbody>

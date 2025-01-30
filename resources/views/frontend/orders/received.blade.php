@@ -18,7 +18,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<h1 class="cart-heading">Your Order:</h4>
+					<h1 class="cart-heading">Pesanan Anda:</h4>
 					<div class="row">
 						<div class="col-xl-3 col-lg-4">
 							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Billing Address</p>
@@ -32,7 +32,7 @@
 							</address>
 						</div>
 						<div class="col-xl-3 col-lg-4">
-							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Shipment Address</p>
+							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Alamat Pengiriman</p>
 							<address>
 								{{ $order->shipment->first_name }} {{ $order->shipment->last_name }}
 								<br> {{ $order->shipment->address1 }}
@@ -43,7 +43,7 @@
 							</address>
 						</div>
 						<div class="col-xl-3 col-lg-4">
-							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Details</p>
+							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Rincian</p>
 							<address>
 								Invoice ID:
 								<span class="text-dark">#{{ $order->code }}</span>
@@ -59,10 +59,10 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Code</th>
-									<th>product name</th>
-									<th>Quantity</th>
-									<th>Unit Cost</th>
+									<th>Kode</th>
+									<th>Nama produk</th>
+									<th>Qty</th>
+									<th>Biaya Satuan</th>
 									<th>Total</th>
 								</tr>
 							</thead>
@@ -78,7 +78,7 @@
 									</tr>
 								@empty
 									<tr>
-										<td colspan="6">Order item not found!</td>
+										<td colspan="6">Barang pesanan tidak ditemukan!</td>
 									</tr>
 								@endforelse
 							</tbody>
@@ -94,7 +94,7 @@
 									<li>Tax (10%)
 										<span>Rp.{{ number_format($order->tax_amount) }}</span>
 									</li>
-									<li>Shipping Cost
+									<li>Biaya Pengiriman
 										<span>Rp.{{ number_format($order->shipping_cost) }}</span>
 									</li>
 									<li>Total

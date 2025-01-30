@@ -11,7 +11,7 @@
                     <a href="{{ route('admin.reviews.index') }}" class="btn btn-primary">
                         <span class="icon text-white-50">
                         </span>
-                        <span class="text">Back to reviews</span>
+                        <span class="text">Kembali ke Ulasan</span>
                     </a>
                 </div>
             </div>

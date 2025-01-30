@@ -17,13 +17,13 @@
                 <table class="table table-hover">
                     <tbody>
                     <tr>
-                        <th>Product Name</th>
+                        <th>Nama Barang</th>
                         <td>{{ $product->name }}</td>
-                        <th>Price</th>
+                        <th>Harga</th>
                         <td>{{ $product->price }}</td>
                     </tr>
                     <tr>
-                        <th>Quantity</th>
+                        <th>Qty</th>
                         <td>{{ $product->quantity }}</td>
                         <th>Status</th>
                         <td>{{ $product->status }}</td>
@@ -42,7 +42,7 @@
                     </tr>
 
                     <tr>
-                        <th>Description</th>
+                        <th>Deskripsi</th>
                         <td colspan="3">{{ $product->description }}</td>
                     </tr>
                     </tbody>

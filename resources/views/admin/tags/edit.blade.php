@@ -12,7 +12,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-home"></i>
                         </span>
-                        <span class="text">{{ __('Back to tags') }}</span>
+                        <span class="text">{{ __('Kembali ke tag') }}</span>
                     </a>
                 </div>
             </div>
@@ -23,14 +23,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
-                                <label for="name">Name</label>
+                                <label for="name">Nama</label>
                                 <input class="form-control" id="name" type="text" name="name" value="{{ old('name', $tag->name) }}">
                                 @error('name')<span class="text-danger">{{ $message }}</span>@enderror
                             </div>
                         </div>
                     </div>
                     <div class="form-group pt-4">
-                        <button class="btn btn-primary" type="submit" name="submit">{{ __('Save') }}</button>
+                        <button class="btn btn-primary" type="submit" name="submit">{{ __('Simpan') }}</button>
                     </div>
                 </form>
             </div>

@@ -9,7 +9,7 @@
                 </h6>
                 <div class="ml-auto">
                     <a href="{{ route('admin.categories.index') }}" class="btn btn-primary">
-                        <span class="text">Back to categories</span>
+                        <span class="text">Kembali ke kategori</span>
                     </a>
                 </div>
             </div>
@@ -17,9 +17,9 @@
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Parent</th>
-                        <th>Created at</th>
+                        <th>Nama</th>
+                        <th>Induk</th>
+                        <th>DiBuat</th>
                     </tr>
                     </thead>
                     <tbody>

@@ -12,7 +12,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-home"></i>
                         </span>
-                        <span class="text">{{ __('Back to rekening') }}</span>
+                        <span class="text">{{ __('Kembali ke rekening') }}</span>
                     </a>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <label for="name">Account Number</label>
+                                <label for="name">Nomor Rekening</label>
                                 <input class="form-control" id="acc_number" type="number" name="acc_number" value="{{ old('acc_number', $rekening->acc_number) }}">
                                 @error('acc_number')<span class="text-danger">{{ $message }}</span>@enderror
                             </div>

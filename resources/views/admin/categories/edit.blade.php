@@ -5,14 +5,14 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('Edit category')}}
+                    {{ __('Edit Kategori')}}
                 </h6>
                 <div class="ml-auto">
                     <a href="{{ route('admin.categories.index') }}" class="btn btn-primary">
                         <span class="icon text-white-50">
                             <i class="fa fa-home"></i>
                         </span>
-                        <span class="text">{{ __('Back to categories') }}</span>
+                        <span class="text">{{ __('Kembali ke categories') }}</span>
                     </a>
                 </div>
             </div>
@@ -23,14 +23,14 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                                <label for="name">Name</label>
+                                <label for="name">Nama</label>
                                 <input class="form-control" id="name" type="text" name="name" value="{{ old('name', $category->name) }}">
                                 @error('name')<span class="text-danger">{{ $message }}</span>@enderror
                             </div>
                         </div>
                         <div class="col-3">
                             <div class="form-group">
-                                <label for="category_id">Parent</label>
+                                <label for="category_id">Induk</label>
                                 <select name="category_id" id="category_id" class="form-control">
                                     <option value="">---</option>
                                     @forelse($parent_categories as $parent_category)
@@ -38,7 +38,7 @@
                                             {{ $parent_category->name }}
                                         </option>
                                     @empty
-                                        <option value="" disabled>No categories found</option>
+                                        <option value="" disabled>Tidak ada kategori yang ditemukan</option>
                                     @endforelse
                                 </select>
                                 @error('parent_id')<span class="text-danger">{{ $message }}</span>@enderror
@@ -48,7 +48,7 @@
 
                     <div class="row pt-4">
                         <div class="col-12">
-                        <label for="cover">Cover image</label><br>
+                        <label for="cover">Gambar sampul</label><br>
                             @if($category->cover)
                                 <img
                                     class="mb-2"
@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="form-group pt-4">
-                        <button class="btn btn-primary" type="submit" name="submit">{{ __('Save') }}</button>
+                        <button class="btn btn-primary" type="submit" name="submit">{{ __('Simpan') }}</button>
                     </div>
                 </form>
             </div>

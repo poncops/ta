@@ -5,8 +5,8 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">{{ __('edit roles')}}</h1>
-        <a href="{{ route('admin.permissions.index') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('Go Back') }}</a>
+        <h1 class="h3 mb-0 text-gray-800">{{ __('edit peran')}}</h1>
+        <a href="{{ route('admin.permissions.index') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('Kembali') }}</a>
     </div>
 
     @if($errors->any())
@@ -26,18 +26,18 @@
                     @csrf
                     @method('put')
                     <div class="form-group">
-                        <label for="title">Title</label>
-                        <input type="text" class="form-control" id="title" placeholder="Title" name="title" value="{{ old('title', $role->title) }}" />
+                        <label for="title">Titel</label>
+                        <input type="text" class="form-control" id="title" placeholder="Titel" name="title" value="{{ old('title', $role->title) }}" />
                     </div>
                     <div class="form-group">
-                        <label for="permissions">{{ __('Permission') }}</label>
+                        <label for="permissions">{{ __('Izin') }}</label>
                         <select name="permissions[]" id="permissions" class="form-control select2" multiple="multiple" required>
                             @foreach($permissions as $id => $permissions)
                                 <option value="{{ $id }}" {{ (in_array($id, old('permissions', [])) || isset($role) && $role->permissions->contains($id)) ? 'selected' : '' }}>{{ $permissions }}</option>
                             @endforeach
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">{{ __('Save')}}</button>
+                    <button type="submit" class="btn btn-primary btn-block">{{ __('Simpan')}}</button>
                 </form>
             </div>
         </div>

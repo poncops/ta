@@ -1,6 +1,6 @@
 <div class="shop-sidebar mr-50">
     <div class="sidebar-widget mb-40">
-        <h3 class="sidebar-title">CATEGORIES</h3>
+        <h3 class="sidebar-title">KATEGORI</h3>
             @foreach($categories_menu as $category_menu)
             <div class="py-2 px-4 bg-dark text-white mb-3">
                 <strong class="small text-uppercase font-weight-bold">
@@ -21,7 +21,7 @@
             @endforeach 
     </div>
     <div class="sidebar-widget mb-40">
-        <h3 class="sidebar-title">TAGS</h3>
+        <h3 class="sidebar-title">TAG</h3>
         <hr style="margin-top: 0; margin-bottom: 10px; border: solid 1px;">
         <div class="price_filter">
           
@@ -44,7 +44,7 @@
         </div>
     </div>
     <div class="sidebar-widget mb-40">
-        <h3 class="sidebar-title">RECENT REVIEWS</h3>
+        <h3 class="sidebar-title">ULASAN TERBARU</h3>
         <hr style="margin-top: 0; margin-bottom: 10px; border: solid 1px;">
         <ul>
             @foreach($recent_reviews as $recent_review)

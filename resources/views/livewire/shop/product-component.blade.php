@@ -5,16 +5,16 @@
                 <div class="shop-found-selector">
                     <div class="shop-found">
                         <p class="small">
-                            Showing {{ $products->firstItem() }} - {{ $products->lastItem() }} of {{ $products->total() }} results
+                        Menampilkan {{ $products->firstItem() }} - {{ $products->lastItem() }} of {{ $products->total() }} hasil
                         </p>
                     </div>
                     <div wire:ignore class="shop-selector">
-                        <label>Sort By :</label>
+                        <label>Urutkan Berdasarkan :</label>
                         <select wire:model="sortingBy" name="sortingBy">
-                            <option value="default">Default sorting</option>
-                            <option value="popularity">Popularity</option>
-                            <option value="low-high">Price: Low to High</option>
-                            <option value="high-low">Price: High to Low</option>
+                            <option value="default">Penyortiran bawaan</option>
+                            <option value="popularity">Kepopuleran</option>
+                            <option value="low-high">Harga: Rendah ke Tinggi</option>
+                            <option value="high-low">Harga: Tinggi ke Rendah</option>
                         </select>
 
                     </div>
@@ -47,10 +47,10 @@
                                 </a>
                                 <span>hot</span>
                                 <div class="product-action">
-                                    <a class="animate-left add-to-fav" title="Favorite"  product-slug="{{ $product->slug }}" href="">
+                                    <a class="animate-left add-to-fav" title="Favorit"  product-slug="{{ $product->slug }}" href="">
                                         <i class="pe-7s-like"></i>
                                     </a>
-                                    <a class="animate-top add-to-card" title="Add To Cart" href="" product-id="{{ $product->id }}" product-type="{{ $product->slug }}" product-slug="{{ $product->slug }}">
+                                    <a class="animate-top add-to-card" title="Tambahkan ke Keranjang" href="" product-id="{{ $product->id }}" product-type="{{ $product->slug }}" product-slug="{{ $product->slug }}">
                                         <i class="pe-7s-cart"></i>
                                     </a>
                                 </div>
@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="product-list-cart-wishlist">
                                     <div class="product-list-cart">
-                                        <a class="btn-hover list-btn-style add-to-card"  product-id="{{ $product->id }}" product-type="{{ $product->slug }}" product-slug="{{ $product->slug }}">add to cart</a>
+                                        <a class="btn-hover list-btn-style add-to-card"  product-id="{{ $product->id }}" product-type="{{ $product->slug }}" product-slug="{{ $product->slug }}">Tambahkan ke keranjang</a>
                                     </div>
                                     <div class="product-list-wishlist">
                                         <a class="btn-hover list-btn-wishlist add-to-fav" title="Favorite"  product-slug="{{ $product->slug }}" href="">

@@ -14,8 +14,8 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">{{ __('Permissions') }}</h1>
-            <a href="{{ route('admin.permissions.create') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('create new')}} <i class="fa fa-plus"> </i></a>
+        <h1 class="h3 mb-0 text-gray-800">{{ __('Izin') }}</h1>
+            <a href="{{ route('admin.permissions.create') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('Buat Baru')}} <i class="fa fa-plus"> </i></a>
     </div>
 
     <!-- Content Row -->
@@ -26,8 +26,8 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Title</th>
-                                <th>Action</th>
+                                <th>Titel</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,7 +39,7 @@
                                     <a href="{{ route('admin.permissions.edit', $permission->id) }}" class="btn btn-info">
                                         <i class="fa fa-pencil-alt"></i>
                                     </a>
-                                    <form onclick="return alert('are you sure ? ')" class="d-inline" action="{{ route('admin.permissions.destroy', $permission->id) }}" method="POST">
+                                    <form onclick="return alert('apa kamu yakin ? ')" class="d-inline" action="{{ route('admin.permissions.destroy', $permission->id) }}" method="POST">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger">

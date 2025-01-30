@@ -7,20 +7,20 @@
                 <div class="col-lg-12">
                     <div class="card card-default">
                         <div class="card-header card-header-border-bottom">
-                            <h2>Revenue Report</h2>
+                            <h2>Laporan Pendapatan</h2>
                         </div>
                         <div class="card-body">
                             <form action="" class="mb-5">
                                 <div class="row">
                                     <div class="col-lg-3">
                                         <div class="form-group mb-2">
-                                            <input type="text" class="form-control datepicker" readonly="" value="{{ !empty(request()->input('start')) ? request()->input('start') : '' }}" name="start" placeholder="from">
+                                            <input type="text" class="form-control datepicker" readonly="" value="{{ !empty(request()->input('start')) ? request()->input('start') : '' }}" name="start" placeholder="Dari">
                                         </div>
                                     </div>
 
                                     <div class="col-lg-3">
                                         <div class="form-group mx-sm-3 mb-2">
-                                            <input type="text" class="form-control datepicker" readonly="" value="{{ !empty(request()->input('end')) ? request()->input('end') : '' }}" name="end" placeholder="to">
+                                            <input type="text" class="form-control datepicker" readonly="" value="{{ !empty(request()->input('end')) ? request()->input('end') : '' }}" name="end" placeholder="Ke">
                                         </div>
                                     </div>
 
@@ -43,12 +43,12 @@
                            <div class="table-responsive">
                             <table class="table table-bordered table-striped">
                                     <thead>
-                                        <th>Date</th>
-                                        <th>Orders</th>
-                                        <th>Gross Revenue</th>
-                                        <th>Taxes</th>
-                                        <th>Shipping</th>
-                                        <th>Net Revenue</th>
+                                        <th>Tanggal</th>
+                                        <th>Pesanan</th>
+                                        <th>Pendapatan Kotor</th>
+                                        <th>Pajak</th>
+                                        <th>Pengiriman</th>
+                                        <th>Pendapatan Bersih</th>
                                     </thead>
                                     <tbody>
                                         @php

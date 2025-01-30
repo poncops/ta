@@ -14,20 +14,20 @@
                         @method('put')
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <label for="first_name">First Name</label>
+                                <label for="first_name">Nama depan</label>
                                 <input type="text" name="first_name"  value="{{ $shipment->first_name }}" class="form-control" readonly>
                             </div>
                             <div class="col-md-6">
-                                <label for="last_name">Last Name</label>
+                                <label for="last_name">Nama Belakang</label>
                                 <input type="text" name="last_name"  value="{{ $shipment->last_name }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="address1">Address 1</label>
+                            <label for="address1">Alamat 1</label>
                             <input type="text" name="address1"  value="{{ $shipment->address1 }}" class="form-control" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="address2">Address 2</label>
+                            <label for="address2">Alamat 2</label>
                             <input type="text" name="address2" value="{{ $shipment->address2 }}" class="form-control" readonly>
                         </div>
                         <div class="form-group">
@@ -49,13 +49,13 @@
                                 </select> 
                             </div>
                             <div class="col-md-6">
-                                <label for="postcode">Postcode</label>
+                                <label for="postcode">Kode Pos</label>
                                 <input type="text" name="postcode" value="{{ $shipment->postcode }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <label for="phone">Phone</label>
+                                <label for="phone">Telepon</label>
                                 <input type="text" name="phone" value="{{ $shipment->phone }}" class="form-control" readonly>
                             </div>
                             <div class="col-md-6">
@@ -69,16 +69,16 @@
                                 <input type="number" name="qty" value="{{ $shipment->total_qty }}" class="form-control" readonly>
                             </div>
                             <div class="col-md-6">
-                                <label for="total_weight">Total Weight</label>
+                                <label for="total_weight">Total Berat</label>
                                 <input type="text" name="total_weight" value="{{ $shipment->total_weight }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="track_number">Track Number</label>
+                            <label for="track_number">Nomor Trek</label>
                             <input type="text" name="track_number" value="{{ $shipment->track_number }}" class="form-control" >
                         </div>
                         <div class="form-footer pt-5 border-top">
-                            <button type="submit" class="btn btn-primary btn-default">Save</button>
+                            <button type="submit" class="btn btn-primary btn-default">Simpan</button>
                             <a href="{{ url('admin/orders/'. $shipment->order->id) }}" class="btn btn-secondary btn-default">Back</a>
                         </div>
                     </form>
@@ -88,12 +88,12 @@
 		<div class="col-lg-6">
 			<div class="card card-default">
 				<div class="card-header card-header-border-bottom">
-					<h2>Detail Order</h2>
+					<h2>Detail Pesanan</h2>
 				</div>
 				<div class="card-body">
 					<div class="row">
 						<div class="col-xl-6 col-lg-6">
-							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Billing Address</p>
+							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Alamat Penagihan</p>
 							<address>
 								{{ $shipment->order->customer_company }} {{ $shipment->order->customer_last_name }}
 								<br> {{ $shipment->order->customer_address1 }}
@@ -104,7 +104,7 @@
 							</address>
 						</div>
 						<div class="col-xl-6 col-lg-6">
-							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Details</p>
+							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Detail</p>
 							<address>
 								ID: <span class="text-dark">#{{ $shipment->order->code }}</span>
 								<br> {{ $shipment->order->order_date }}
@@ -118,7 +118,7 @@
 						<thead>
 							<tr>
 								<th>#</th>
-								<th>Item</th>
+								<th>Barang</th>
 								<th>Qty</th>
 								<th>Total</th>
 							</tr>
@@ -133,7 +133,7 @@
 								</tr>
 							@empty
 								<tr>
-									<td colspan="6">Order item not found!</td>
+									<td colspan="6">Barang pesanan tidak ditemukan!</td>
 								</tr>
 							@endforelse
 						</tbody>
@@ -147,7 +147,7 @@
 								<li class="mid pb-3 text-dark">Tax(10%)
 									<span class="d-inline-block float-right text-default">{{ $shipment->order->tax_amount }}</span>
 								</li>
-								<li class="mid pb-3 text-dark">Shipping Cost
+								<li class="mid pb-3 text-dark">Biaya Pengiriman
 									<span class="d-inline-block float-right text-default">{{ $shipment->order->shipping_cost }}</span>
 								</li>
 								<li class="pb-3 text-dark">Total

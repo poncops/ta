@@ -33,12 +33,12 @@
     <body>
    <div class="container">
         <div style="height: 100vh;" class=" d-flex flex-column justify-content-center align-items-center">
-        <h1>Thank's for Order !</h1>
-        <p>we process your order as soon as possible</p>
+        <h1>Terima kasih atas pesanannya !</h1>
+        <p>kami memproses pesanan Anda sesegera mungkin</p>
 
         <div class="test">
-            <a href="{{ route('orders.index') }}" class="btn btn-warning text-white rounded">Your Order</a>
-            <a href="{{ route('homepage') }}" class="btn btn-primary text-white rounded">Homepage</a>
+            <a href="{{ route('orders.index') }}" class="btn btn-warning text-white rounded">Pesanan Anda</a>
+            <a href="{{ route('homepage') }}" class="btn btn-primary text-white rounded">Beranda</a>
         </div>
         </div>
    </div>

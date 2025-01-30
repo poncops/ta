@@ -13,7 +13,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New Rekening') }}</span>
+                        <span class="text">{{ __('Rekening Baru') }}</span>
                     </a>
                     @endcan
                 </div>
@@ -24,9 +24,9 @@
                     <tr>
                         <th>No</th>
                         <th>Bank</th>
-                        <th>Account Number</th>
-                        <th>Name</th>
-                        <th class="text-center" style="width: 30px;">Action</th>
+                        <th>Nomor Rekening</th>
+                        <th>Nama</th>
+                        <th class="text-center" style="width: 30px;">Aksi</th>
                     </tr>
                     </thead>
                     <tbody>

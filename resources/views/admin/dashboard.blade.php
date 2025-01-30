@@ -18,7 +18,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                               Product</div>
+                               Produk</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $product_count }}</div>
                         </div>
                         <div class="col-auto">
@@ -36,7 +36,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Order</div>
+                                Pesanan</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $order }}</div>
                         </div>
                         <div class="col-auto">
@@ -53,7 +53,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Cancel
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Membatalkan
                             </div>
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
@@ -76,7 +76,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                               Success</div>
+                               Sukses</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $order_success }}</div>
                         </div>
                         <div class="col-auto">

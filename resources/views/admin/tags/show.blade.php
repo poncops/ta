@@ -9,7 +9,7 @@
                 </h6>
                 <div class="ml-auto">
                     <a href="{{ route('admin.tags.index') }}" class="btn btn-primary">
-                        <span class="text">Back to tags</span>
+                        <span class="text">Kembali ke tag</span>
                     </a>
                 </div>
             </div>
@@ -17,10 +17,10 @@
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Nama</th>
                         <th>Slug</th>
-                        <th>Product Count</th>
-                        <th>Created at</th>
+                        <th>Jumlah Brg</th>
+                        <th>DiBuat</th>
                     </tr>
                     </thead>
                     <tbody>

@@ -109,8 +109,8 @@ class CategoryController extends Controller
 
         $image = $category->cover;
         if ($request->has('cover')) {
-            if ($category->cover != null && File::exists('storage/images//'. $category->cover)) {
-                unlink('storage/images//'. $category->cover);
+            if ($category->cover != null && File::exists('storage/images/categories/'. $category->cover)) {
+                unlink('storage/images/categories/'. $category->cover);
             }
             $image = $this->uploadImage($request->name, $request->cover, 'categories', 268, 268);
         }
@@ -139,15 +139,15 @@ class CategoryController extends Controller
 
         if($category->category_id == null) {
             foreach($category->children as $child) {
-                if (File::exists('storage/images//'. $child->cover)) {
-                    unlink('storage/images//'. $child->cover);
+                if (File::exists('storage/images/categories/'. $child->cover)) {
+                    unlink('storage/images/categories/'. $child->cover);
                 }
             }
         }
 
         if ($category->cover) {
-            if (File::exists('storage/images//'. $category->cover)) {
-                unlink('storage/images//'. $category->cover);
+            if (File::exists('storage/images/categories/'. $category->cover)) {
+                unlink('storage/images/categories/'. $category->cover);
             }
         }
 

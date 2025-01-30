@@ -12,7 +12,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-home"></i>
                         </span>
-                        <span class="text">{{ __('Back to slides') }}</span>
+                        <span class="text">{{ __('Kembali ke slide') }}</span>
                     </a>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                                <label for="title">title</label>
+                                <label for="title">titel</label>
                                 <input class="form-control" id="title" type="text" name="title" value="{{ old('title', $slide->title) }}">
                                 @error('title')<span class="text-danger">{{ $message }}</span>@enderror
                             </div>
@@ -47,14 +47,14 @@
                     </div>
                     <div class="row pt-4">
                         <div class="col-12">
-                            <label for="cover">Cover image</label><br>
+                            <label for="cover">Gambar sampul</label><br>
                             @if($slide->cover)
                                 <img
                                     class="mb-2"
                                     src="{{ Storage::url('images/slides/' . $slide->cover) }}"
                                     alt="{{ $slide->name }}" width="100" height="100">
                             @else
-                               <span class="badge badge-info">No image</span>
+                               <span class="badge badge-info">Tidak ada Gambar</span>
                             @endif
                             <br>
                             <div class="file-loading">
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="form-group pt-4">
-                        <button class="btn btn-primary" type="submit" name="submit">{{ __('Save') }}</button>
+                        <button class="btn btn-primary" type="submit" name="submit">{{ __('Simpan') }}</button>
                     </div>
                 </form>
             </div>

@@ -5,7 +5,7 @@
     <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('Orders') }}
+                    {{ __('Pesanan') }}
                 </h6>
             </div>
             <div class="table-responsive">
@@ -13,12 +13,12 @@
                     <thead>
                     <tr>
                         <th>No</th>
-                        <th>Order ID</th>
-                        <th>Grand Total</th>
-                        <th>Name</th>
+                        <th>Pesanan ID</th>
+                        <th>Jumlah keseluruhan</th>
+                        <th>Nama</th>
                         <th>Status</th>
-                        <th>Payment</th>
-                        <th class="text-center" style="width: 30px;">Action</th>
+                        <th>Pembayaran</th>
+                        <th class="text-center" style="width: 30px;">Aksi</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -41,7 +41,7 @@
                                     <a href="{{ route('admin.orders.show', $order) }}" class="btn btn-sm btn-primary">
                                         <i class="fa fa-eye"></i>
                                     </a>
-                                    <form onclick="return confirm('are you sure !')" action="{{ route('admin.orders.destroy', $order) }}"
+                                    <form onclick="return confirm('apa kamu yakin !')" action="{{ route('admin.orders.destroy', $order) }}"
                                     method="POST">
                                     @csrf
                                     @method('DELETE')

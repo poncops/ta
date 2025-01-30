@@ -11,7 +11,7 @@ function getShippingCostOptions(city_id) {
             $("#shipping-cost-option").append(
                 "<option value>- Please Select -</option>"
             );
-            $("#test").val("Place order");
+            $("#test").val("Lakukan pemesanan");
 
             $.each(response.results, function (key, result) {
                 $("#shipping-cost-option").append(

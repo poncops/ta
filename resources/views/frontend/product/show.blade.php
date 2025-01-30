@@ -88,7 +88,7 @@
                                         <input type="number" name="qty" min="1" value="1" class="cart-plus-minus-box" placeholder="qty">
                                     </div>
                                     <div class="quickview-btn-cart">
-                                        <button type="submit" class="submit contact-btn btn-hover">add to cart</button>
+                                        <button type="submit" class="submit contact-btn btn-hover">Tambahkan ke keranjang</button>
                                     </div>
                                     <div class="quickview-btn-wishlist">
                                         <a class="btn-hover" href="#"><i class="pe-7s-like"></i></a>
@@ -97,13 +97,13 @@
 							</form>
                         <div class="product-details-cati-tag mt-35">
                             <ul>
-                                <li class="categories-title">Categories :</li>
+                                <li class="categories-title">Kategori :</li>
                                 <li><a class="badge badge-warning text-white" href="{{ route('shop.index', $product->category->slug) }}">{{ $product->category->name }}</a></li>
                             </ul>
                         </div>
                         <div class="product-details-cati-tag mtb-10">
                             <ul>
-                                <li class="categories-title">Tags :</li>
+                                <li class="categories-title">Tag :</li>
                                 <li>
                                     @if($product->tags->count() > 0)
                                         @foreach($product->tags as $tag)
@@ -143,7 +143,7 @@
                         Reviews ({{ $product->approved_reviews_count }})
                     </a>
                     <a href="#pro-dec" data-toggle="tab" role="tab" aria-selected="true">
-                        Description
+                        Deskripsi
                     </a>
                 </div>
                 <div class="description-review-text tab-content">
@@ -186,10 +186,10 @@
                                         @endif
                                     </a>
                                     <div class="product-action">
-                                        <a class="animate-left add-to-fav" title="Wishlist"  product-slug="{{ $product->slug }}" href="">
+                                        <a class="animate-left add-to-fav" title="Daftar Keinginan"  product-slug="{{ $product->slug }}" href="">
                                             <i class="pe-7s-like"></i>
                                         </a>
-                                        <a class="animate-top add-to-card" title="Add To Cart" href="" product-id="{{ $product->id }}" product-slug="{{ $product->slug }}">
+                                        <a class="animate-top add-to-card" title="Tambahkan ke Keranjang" href="" product-id="{{ $product->id }}" product-slug="{{ $product->slug }}">
                                             <i class="pe-7s-cart"></i>
                                         </a>
                                     </div>

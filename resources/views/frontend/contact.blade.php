@@ -27,7 +27,7 @@
                         <i class="linearicons-map2"></i>
                     </div>
                     <div class="contact_text">
-                        <span>Address</span>
+                        <span>Alamat</span>
                         <p>Keputih, Kec. Sukolilo, Surabaya, Jawa Timur 60111</p>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         <i class="linearicons-envelope-open"></i>
                     </div>
                     <div class="contact_text">
-                        <span>Email Address</span>
+                        <span>Alamat Email</span>
                         <p><a href="mailto:info@sitename.com">info@sakinah.com</a></p>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                         <i class="linearicons-tablet2"></i>
                     </div>
                     <div class="contact_text">
-                        <span>Phone</span>
+                        <span>Telepon</span>
                         <p>(031) 5926020</p>
                     </div>
                 </div>

@@ -8,12 +8,12 @@
                 <h2 class="text-dark font-weight-medium">Order ID #{{ $order->code }}</h2>
                 <div class="btn-group">
                     <a href="{{ route('admin.orders.index') }}" class="btn btn-sm btn-warning">
-                     Go Back</a>
+                     Kembali</a>
                 </div>
             </div>
             <div class="row pt-5">
                 <div class="col-xl-4 col-lg-4">
-                    <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Billing Address</p>
+                    <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Alamat Penagihan</p>
                     <address>
                         {{ $order->customer_first_name }} {{ $order->customer_last_name }}
                         <br> {{ $order->customer_address1 }}
@@ -24,7 +24,7 @@
                     </address>
                 </div>
                 <div class="col-xl-4 col-lg-4">
-                    <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Shipment Address</p>
+                    <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Alamat Pengiriman</p>
                     <address>
                         {{ $order->shipment->first_name }} {{ $order->shipment->last_name }}
                         <br> {{ $order->shipment->address1 }}
@@ -35,7 +35,7 @@
                     </address>
                 </div>
                 <div class="col-xl-4 col-lg-4">
-                    <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Details</p>
+                    <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Detail</p>
                     <address>
                         ID: <span class="text-dark">#{{ $order->code }}</span>
                         <br> DATE: <span>{{ $order->order_date }}</span>
@@ -52,9 +52,9 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Item</th>
+                        <th>Barang</th>
                         <th>Quantity</th>
-                        <th>Unit Cost</th>
+                        <th>Biaya Satuan</th>
                         <th>Total</th>
                     </tr>
                 </thead>
@@ -69,7 +69,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="6">Order item not found!</td>
+                            <td colspan="6">Barang pesanan tidak ditemukan!</td>
                         </tr>
                     @endforelse
                 </tbody>
@@ -83,7 +83,7 @@
                         <li class="mid pb-3 text-dark">Tax(10%)
                             <span class="d-inline-block float-right text-default">{{ number_format($order->tax_amount) }}</span>
                         </li>
-                        <li class="mid pb-3 text-dark">Shipping Cost
+                        <li class="mid pb-3 text-dark">biaya pengiriman
                             <span class="d-inline-block float-right text-default">{{ number_format($order->shipping_cost) }}</span>
                         </li>
                         <li class="pb-3 text-dark">Total
@@ -93,19 +93,19 @@
 
                     <!-- Edit Process to Shipment -->
                     @if ($order->isPaid() && $order->isConfirmed())
-                        <a href="{{ route('admin.shipments.edit', $order->shipment->id) }}" class="btn btn-block mt-2 btn-lg btn-primary btn-pill"> Procced to Shipment</a>
+                        <a href="{{ route('admin.shipments.edit', $order->shipment->id) }}" class="btn btn-block mt-2 btn-lg btn-primary btn-pill"> Lanjutkan ke Pengiriman</a>
                     @endif
 
                     <!-- Cancel Order -->
                     @if (in_array($order->status, [\App\Models\Order::CREATED, \App\Models\Order::CONFIRMED]))
-                        <a href="{{ route('admin.orders.cancel', $order->id) }}" class="btn btn-block mt-2 btn-lg btn-warning btn-pill"> Cancel</a>
+                        <a href="{{ route('admin.orders.cancel', $order->id) }}" class="btn btn-block mt-2 btn-lg btn-warning btn-pill"> Batal</a>
                     @endif
 
                     <!-- Order Completed -->
                     @if ($order->isDelivered())    
                         <form action="{{ route('admin.orders.complete', $order->id) }}" method="post" >
                             @csrf
-                            <button class="btn btn-block mt-2 btn-lg btn-success btn-pill"> Mark as Completed</button>
+                            <button class="btn btn-block mt-2 btn-lg btn-success btn-pill"> Tandai sebagai Selesai</button>
                         </form>
                     @endif
                     
@@ -113,13 +113,13 @@
                         <!-- Handle Paid Order -->
                         <form action="{{ route('admin.orders.paid', $order->id) }}" method="post" >
                             @csrf
-                            <button class="btn btn-block mt-2 btn-lg btn-success btn-pill"> Order Paid</button>
+                            <button class="btn btn-block mt-2 btn-lg btn-success btn-pill"> Pesanan Sudah Dibayar</button>
                         </form>
                     @endif
 
                     <!-- Remove Order -->
                     @if (!in_array($order->status, [\App\Models\Order::DELIVERED, \App\Models\Order::COMPLETED]))
-                        <a href="" class="btn btn-block mt-2 btn-lg btn-secondary btn-pill delete" onclick="event.preventDefault();document.getElementById('delete-form-{{$order->id}}').submit();"> Remove</a>
+                        <a href="" class="btn btn-block mt-2 btn-lg btn-secondary btn-pill delete" onclick="event.preventDefault();document.getElementById('delete-form-{{$order->id}}').submit();"> Hapus</a>
                         
                         <form action="{{ route('admin.orders.destroy', $order) }} }}" method="post" id="delete-form-{{$order->id}}" class="d-none">
                             @csrf

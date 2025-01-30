@@ -13,12 +13,12 @@
                         @csrf 
                         @method('put')
                     <div class="form-group">
-                        <label for="cancellation note">Cancellation Note</label>
+                        <label for="cancellation note">Catatan Pembatalan</label>
                         <textarea name="cancellation_note" class="form-control" cols="30" rows="10"></textarea>
                         @error('cancellation_note')<span class="text-danger">{{ $message }}</span>@enderror
                     </div>
                     <div class="form-footer pt-5 border-top">
-                        <button type="submit" class="btn btn-primary btn-default">Cancel the Order</button>
+                        <button type="submit" class="btn btn-primary btn-default">Batalkan Pesanan</button>
                         <a href="{{ route('admin.orders.index') }}" class="btn btn-secondary btn-default">Back</a>
                     </div>
                     </form>
@@ -28,7 +28,7 @@
         <div class="col-lg-6">
             <div class="card card-default">
                 <div class="card-header card-header-border-bottom">
-                    <h2>Detail Order</h2>
+                    <h2>Detail Pesanan</h2>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -60,7 +60,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Item</th>
+                                <th>Barang</th>
                                 <th>Qty</th>
                                 <th>Total</th>
                             </tr>
@@ -89,7 +89,7 @@
                                 <li class="mid pb-3 text-dark">Tax(10%)
                                     <span class="d-inline-block float-right text-default">{{ number_format($order->tax_amount) }}</span>
                                 </li>
-                                <li class="mid pb-3 text-dark">Shipping Cost
+                                <li class="mid pb-3 text-dark">Biaya pengiriman
                                     <span class="d-inline-block float-right text-default">{{ number_format($order->shipping_cost) }}</span>
                                 </li>
                                 <li class="pb-3 text-dark">Total

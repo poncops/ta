@@ -5,8 +5,8 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">{{ __('create permission') }}</h1>
-        <a href="{{ route('admin.permissions.index') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('Go Back') }}</a>
+        <h1 class="h3 mb-0 text-gray-800">{{ __('Buat Izin') }}</h1>
+        <a href="{{ route('admin.permissions.index') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('Kembali') }}</a>
     </div>
 
     @if($errors->any())
@@ -25,10 +25,10 @@
                 <form action="{{ route('admin.permissions.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="title">{{ __('Title') }}</label>
-                        <input type="text" class="form-control" id="title" placeholder="{{ __('Title') }}" name="title" value="{{ old('title') }}" />
+                        <label for="title">{{ __('Titel') }}</label>
+                        <input type="text" class="form-control" id="title" placeholder="{{ __('Titel') }}" name="title" value="{{ old('title') }}" />
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">{{ __('Save') }}</button>
+                    <button type="submit" class="btn btn-primary btn-block">{{ __('Simpan') }}</button>
                 </form>
             </div>
         </div>

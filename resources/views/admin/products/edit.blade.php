@@ -9,14 +9,14 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('Edit product')}}
+                    {{ __('Edit produk')}}
                 </h6>
                 <div class="ml-auto">
                     <a href="{{ route('admin.products.index') }}" class="btn btn-primary">
                         <span class="icon text-white-50">
                             <i class="fa fa-home"></i>
                         </span>
-                        <span class="text">{{ __('Back to products') }}</span>
+                        <span class="text">{{ __('Kembali ke produk') }}</span>
                     </a>
                 </div>
             </div>
@@ -27,21 +27,21 @@
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-group">
-                                    <label for="name">Name</label>
+                                    <label for="name">Nama</label>
                                     <input class="form-control" id="name" type="text" name="name" value="{{ old('name', $product->name) }}">
                                     @error('name')<span class="text-danger">{{ $message }}</span>@enderror
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group">
-                                    <label for="price">Price</label>
+                                    <label for="price">Harga</label>
                                     <input class="form-control" id="price" type="number" name="price" value="{{ old('price', $product->price) }}">
                                     @error('price')<span class="text-danger">{{ $message }}</span>@enderror
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group">
-                                    <label for="quantity">Quantity</label>
+                                    <label for="quantity">Qty</label>
                                     <input class="form-control" id="quantity" type="number" name="quantity" value="{{ old('quantity', $product->quantity) }}">
                                     @error('quantity')<span class="text-danger">{{ $message }}</span>@enderror
                                 </div>
@@ -50,9 +50,9 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label for="category_id">Category</label>
+                                    <label for="category_id">Kategori</label>
                                     <select name="category_id" id="category_id" class="form-control">
-                                        <option value="">- Select category -</option>
+                                        <option value="">- Pilih kategori -</option>
                                         @forelse($categories as $category)
                                             <option value="{{ $category->id }}" {{ old('category_id') || $product->category_id == $category->id ? 'selected' : null }}>
                                                 {{ $category->name }}
@@ -65,7 +65,7 @@
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label for="tags">Tags</label>
+                                    <label for="tags">Tag</label>
                                     <select name="tags[]" id="tags" class="form-control select2" multiple="multiple">
                                         @forelse($tags as $tag)
                                             <option value="{{ $tag->id }}" {{ in_array($tag->id, $product->tags->pluck('id')->toArray()) ? 'selected' : null }} >{{ $tag->name }}</option>
@@ -81,7 +81,7 @@
                                 <div class="form-group">
                                     <label for="status">Status</label>
                                     <select name="status" id="status" class="form-control">
-                                        <option value="">- Select Status-</option>
+                                        <option value="">- Pilih Status-</option>
                                         <option value="1" {{ old('status', $product->status) == "Active" ? 'selected' : null }}>Active</option>
                                         <option value="0" {{ old('status', $product->status) == "Inactive" ? 'selected' : null }}>Inactive</option>
                                     </select>
@@ -92,7 +92,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                <label for="description" class="text-small text-uppercase">{{ __('Description') }}</label>
+                                <label for="description" class="text-small text-uppercase">{{ __('Deskripsi') }}</label>
                                 <textarea name="description" rows="3" class="form-control summernote">{!! old('description', $product->description) !!}</textarea>
                                 @error('description')<span class="text-danger">{{ $message }}</span>@enderror
                                 </div>
@@ -101,7 +101,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                <label for="details" class="text-small text-uppercase">{{ __('details') }}</label>
+                                <label for="details" class="text-small text-uppercase">{{ __('detail') }}</label>
                                 <textarea name="details" rows="3" class="form-control summernote">{!! old('details', $product->details) !!}</textarea>
                                 @error('details')<span class="text-danger">{{ $message }}</span>@enderror
                                 </div>
@@ -109,7 +109,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <label for="images">{{ __('images') }}</label>
+                                <label for="images">{{ __('Gambar') }}</label>
                                 <br>
                                 <div class="file-loading">
                                     <input type="file" name="images[]" id="product-images" class="file-input-overview" multiple="multiple">
@@ -118,7 +118,7 @@
                             </div>
                         </div>
                         <div class="form-group pt-4">
-                            <button class="btn btn-primary" type="submit" name="submit">{{ __('Save') }}</button>
+                            <button class="btn btn-primary" type="submit" name="submit">{{ __('Simpan') }}</button>
                         </div>
                     </form>
             </div>

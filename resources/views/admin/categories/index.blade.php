@@ -5,7 +5,7 @@
     <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('Categories') }}
+                    {{ __('Kategori') }}
                 </h6>
                 <div class="ml-auto">
                     @can('category_create')
@@ -13,7 +13,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New category') }}</span>
+                        <span class="text">{{ __('Kategori Baru') }}</span>
                     </a>
                     @endcan
                 </div>
@@ -23,11 +23,11 @@
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Product count</th>
-                        <th>Parent</th>
-                        <th class="text-center" style="width: 30px;">Action</th>
+                        <th>Gambar</th>
+                        <th>Nama</th>
+                        <th>Jumlah Brg</th>
+                        <th>Induk</th>
+                        <th class="text-center" style="width: 30px;">Aksi</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -39,7 +39,7 @@
                                     <img src="{{ Storage::url('images/categories/' . $category->cover) }}"
                                         width="60" height="60" alt="{{ $category->name }}">
                                 @else
-                                    <span class="badge badge-primary">No image</span>
+                                    <span class="badge badge-primary">Tidak ada gambar</span>
                                 @endif
                             </td>
                             <td><a href="{{ route('admin.categories.show', $category->id) }}">
@@ -53,7 +53,7 @@
                                     <a href="{{ route('admin.categories.edit', $category) }}" class="btn btn-sm btn-primary">
                                         <i class="fa fa-edit"></i>
                                     </a>
-                                    <form onclick="return confirm('are you sure !')" action="{{ route('admin.categories.destroy', $category) }}"
+                                    <form onclick="return confirm('apa kamu yakin !')" action="{{ route('admin.categories.destroy', $category) }}"
                                     method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -64,7 +64,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td class="text-center" colspan="6">No categories found.</td>
+                            <td class="text-center" colspan="6">Tidak ada kategori yang ditemukan.</td>
                         </tr>
                     @endforelse
                     </tbody>

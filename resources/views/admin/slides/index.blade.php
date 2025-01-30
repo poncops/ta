@@ -5,7 +5,7 @@
     <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('Slides') }}
+                    {{ __('Slide') }}
                 </h6>
                 <div class="ml-auto">
                     @can('slide_create')
@@ -13,7 +13,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New slide') }}</span>
+                        <span class="text">{{ __('slide Baru') }}</span>
                     </a>
                     @endcan
                 </div>
@@ -23,11 +23,11 @@
                     <thead>
                     <tr>
                         <th>No</th>
-                        <th>Title</th>
-                        <th>Image</th>
-                        <th>Position</th>
-                        <th>Set Position</th>
-                        <th class="text-center" style="width: 30px;">Action</th>
+                        <th>Titel</th>
+                        <th>Gambar</th>
+                        <th>Posisi</th>
+                        <th>Atur Posisi</th>
+                        <th class="text-center" style="width: 30px;">Aksi</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -72,7 +72,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td class="text-center" colspan="6">No tags found.</td>
+                            <td class="text-center" colspan="6">Tidak ada tag yang ditemukan.</td>
                         </tr>
                     @endforelse
                     </tbody>

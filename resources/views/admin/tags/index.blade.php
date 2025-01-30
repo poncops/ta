@@ -5,7 +5,7 @@
     <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('Tags') }}
+                    {{ __('Tag') }}
                 </h6>
                 <div class="ml-auto">
                     @can('tag_create')
@@ -13,7 +13,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New tag') }}</span>
+                        <span class="text">{{ __('Tag baru') }}</span>
                     </a>
                     @endcan
                 </div>
@@ -23,9 +23,9 @@
                     <thead>
                     <tr>
                         <th>No</th>
-                        <th>Name</th>
-                        <th>Product count</th>
-                        <th class="text-center" style="width: 30px;">Action</th>
+                        <th>Nama</th>
+                        <th>Jumlah Brg</th>
+                        <th class="text-center" style="width: 30px;">Aksi</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -53,7 +53,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td class="text-center" colspan="6">No tags found.</td>
+                            <td class="text-center" colspan="6">Tidak ada tag yang ditemukan.</td>
                         </tr>
                     @endforelse
                     </tbody>

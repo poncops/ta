@@ -29,7 +29,7 @@
         <!-- categories -->
         <div class="container mt-5">
                 <div class="section-title-furits text-center">
-                    <h2>BROWSE OUR CATEGORIES</h2>
+                    <h2>TELUSURI KATEGORI KAMI</h2>
                 </div>
                 <br>
             <div class="row mt-5">
@@ -55,16 +55,16 @@
         <div class="services-area wrapper-padding-4 gray-bg pt-120 pb-80">
             <div class="container-fluid">
                 <div class="section-title-furits text-center">
-                    <h2>Why Choose Us</h2>
+                    <h2>Mengapa Memilih Kami</h2>
                 </div>
                 <br>
                 <div class="row mt-40">
                     <div class="single-services col-md-4 mb-40">
                         <div class="services-img">
-                            <img src="{{ asset('frontend/assets/img/icon-img/26.png') }}" alt="">
+                            <img src="{{ asset('frontend/assets/img/icon-img/26.png') }}" width="140" height="100" alt="">
                         </div>
                         <div class="services-content">
-                            <h4>Free Shippig</h4>
+                            <h4>Bebas Biaya Kirim</h4>
                             <p></p>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                             <img src="{{ asset('frontend/assets/img/icon-img/28.png') }}" alt="">
                         </div>
                         <div class="services-content" >
-                            <h4>Secure Payments</h4>
+                            <h4>Pembayaran Aman</h4>
                             <h5></h5>
                             <p></p>
                         </div>
@@ -97,7 +97,7 @@
             <div class="container-fluid">
                 <br>
                 <div class="section-title-furits section-title-6 text-center mb-50">
-                    <h2>Popular Product</h2>
+                    <h2>Produk Populer</h2>
                 </div>
                 <br>
                 <div class="product-style">
@@ -114,10 +114,10 @@
                                         @endif
                                     </a>
                                     <div class="product-action">
-                                        <a class="animate-left add-to-fav" title="Wishlist"  product-slug="{{ $product->slug }}" href="">
+                                        <a class="animate-left add-to-fav" title="Daftar Keinginan"  product-slug="{{ $product->slug }}" href="">
                                             <i class="pe-7s-like"></i>
                                         </a>
-                                        <a class="animate-top add-to-card" title="Add To Cart" href="" product-id="{{ $product->id }}" product-slug="{{ $product->slug }}">
+                                        <a class="animate-top add-to-card" title="Tambahkan ke Keranjang" href="" product-id="{{ $product->id }}" product-slug="{{ $product->slug }}">
                                             <i class="pe-7s-cart"></i>
                                         </a>
                                     </div>

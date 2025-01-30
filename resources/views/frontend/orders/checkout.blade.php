@@ -7,10 +7,10 @@
 	<div class="breadcrumb-area breadcrumb-padding bg-breadcrumb" style="background-image: url({{ asset('frontend/assets/img/sakinah_mart.png') }})">
 		<div class="container">
 			<div class="breadcrumb-content text-center">
-				<h2>Checkout Page</h2>
+				<h2>Halaman Pembayaran</h2>
 				<ul>
 					<li><a href="{{ url('/') }}">home</a></li>
-					<li> Checkout Page</li>
+					<li> Halaman Pembayaran</li>
 				</ul>
 			</div>
 		</div>
@@ -23,40 +23,40 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-12 col-12">
 					<div class="checkbox-form">						
-						<h3>Billing Details</h3>
+						<h3>Detail Penagihan</h3>
 						<div class="row">
 							<div class="col-md-12">
 								<div class="checkout-form-list">
-									<label>Username <span class="required">*</span></label>
+									<label>Nama <span class="required">*</span></label>
                                     <input type="text" name="username" value="{{ auth()->user()->username }}" placeholder="Username ...">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="checkout-form-list">
-									<label>First Name <span class="required">*</span></label>
-                                    <input type="text" name="first_name" value="{{ auth()->user()->first_name }}" placeholder="First Name ...">
+									<label>Nama Depan <span class="required">*</span></label>
+                                    <input type="text" name="first_name" value="{{ auth()->user()->first_name }}" placeholder="Nama Depan ...">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="checkout-form-list">
-									<label>Last Name <span class="required">*</span></label>
-                                    <input type="text" name="last_name" value="{{ auth()->user()->last_name }}" placeholder="Last Name ...">
+									<label>Nama Belakang <span class="required">*</span></label>
+                                    <input type="text" name="last_name" value="{{ auth()->user()->last_name }}" placeholder="Nama Belakang ...">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="checkout-form-list">
-									<label>Address <span class="required">*</span></label>
-                                    <input type="text" name="address1" value="{{ auth()->user()->address1 }}" placeholder="Home number and street name...">
+									<label>Alamat <span class="required">*</span></label>
+                                    <input type="text" name="address1" value="{{ auth()->user()->address1 }}" placeholder="Nomor rumah dan nama jalan...">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="checkout-form-list">
-                                <input type="text" name="address2" value="{{ auth()->user()->address2}}" placeholder="Apartment, suite, unit etc. (optional)...">
+                                <input type="text" name="address2" value="{{ auth()->user()->address2}}" placeholder="Apartemen, Kantor, dll. (opsional)...">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="checkout-form-list">
-									<label>Province<span class="required">*</span></label>
+									<label>Provinsi<span class="required">*</span></label>
 									<select name="province_id"id="province-id" value="{{ auth()->user()->province_id }}">
 											<option value="">- Please Select -</option>
 											@foreach($provinces as $province => $pro)
@@ -67,7 +67,7 @@
 							</div>
 							<div class="col-md-6">
 								<div class="checkout-form-list">
-									<label>City<span class="required">*</span></label>
+									<label>Kota<span class="required">*</span></label>
 									<select name="city_id" id="city-id" value="{{ auth()->user()->city_id }}" >
 											@foreach($cities as $id => $city)
 											<option {{ auth()->user()->city_id == $id ? 'selected' : null }} value="{{ $id }}">{{ $city }}</option>
@@ -77,27 +77,27 @@
 							</div>
 							<div class="col-md-6">
 								<div class="checkout-form-list">
-									<label>Postcode / Zip <span class="required">*</span></label>						
+									<label>Kode Pos / Zip <span class="required">*</span></label>						
 									<input type="number" name="postcode" placeholder="PostalCode..." value="{{ auth()->user()->postcode }}">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="checkout-form-list">
-									<label>Shipping<span class="required">*</span></label>
+									<label>Pengiriman<span class="required">*</span></label>
 									<select name="shipping-cost-option" id="shipping-cost-option" value="" >
-										<option value="">- Please Select -</option>
+										<option value="">- Silakan Pilih -</option>
                                  	</select> 
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="checkout-form-list">
-									<label>Phone  <span class="required">*</span></label>		
-									<input type="text" name="phone" placeholder="Phone..." value="{{ auth()->user()->phone }}">
+									<label>Telepon  <span class="required">*</span></label>		
+									<input type="text" name="phone" placeholder="Telepon..." value="{{ auth()->user()->phone }}">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="checkout-form-list">
-									<label>Email Address </label>
+									<label>Alamat Email </label>
 									<input type="text" name="email" readonly placeholder="Email..." value="{{ auth()->user()->email}}">								
 								</div>
 							</div>							
@@ -178,7 +178,7 @@
 							</div> -->
 							<div class="order-notes">
 								<div class="checkout-form-list mrg-nn">
-									<label for="note">Order Notes</label>
+									<label for="note">Catatan Pesanan</label>
 									<textarea name="note" id="note" cols="30" rows="10"></textarea>
 								</div>									
 							</div>
@@ -187,12 +187,12 @@
 				</div>	
 				<div class="col-lg-6 col-md-12 col-12">
 					<div class="your-order">
-						<h3>Your order</h3>
+						<h3>Pesanan Anda</h3>
 						<div class="your-order-table table-responsive">
 							<table>
 								<thead>
 									<tr>
-										<th class="product-name">Product</th>
+										<th class="product-name">Produk</th>
 										<th class="product-total">Total</th>
 									</tr>							
 								</thead>
@@ -213,7 +213,7 @@
 										</tr>
 									@empty
 										<tr>
-											<td colspan="2">The cart is empty! </td>
+											<td colspan="2">Keranjang belanja kosong! </td>
 										</tr>
 									@endforelse
 								</tbody>
@@ -227,7 +227,7 @@
 										<td><span class="amount">{{ number_format(\Cart::getSubTotal()) }}</span></td>
 									</tr>
 									<tr class="cart-subtotal">
-										<th>Shipping Cost ({{ $totalWeight }} gram)</th>
+										<th>Biaya Pengiriman ({{ $totalWeight }} gram)</th>
 										<!-- <td><input type="text" id="shipping-cost-option2" name="shipping_service" value="10000" readonly></input></td> -->
 										<td>
 											<input type="text" id="shipping-cost" name="shipping_cost" value="0" readonly></input>
@@ -236,7 +236,7 @@
 										</td>
 									</tr>
 									<tr class="order-total">
-										<th>Order Total</th>
+										<th>Jumlah Pesanan</th>
 										<td><strong><span class="total-amount">{{ number_format(\Cart::getTotal()) }}</span></strong>
 										</td>
 									</tr>								
@@ -284,7 +284,7 @@
 									</div> -->
 								</div>
 								<div class="order-button-payment" >
-									<input type="submit" id="test" value="Place order" />
+									<input type="submit" id="test" value="Lakukan pemesanan" />
 								</div>								
 							</div>
 						</div>

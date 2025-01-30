@@ -59,12 +59,12 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <a href="/">home</a>
+                                    <a href="/">Beranda</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('shop.index') }}">shop</a>
+                                    <a href="{{ route('shop.index') }}">Toko</a>
                                 </li>
-                                <li><a href="#">Categories</a>
+                                <!-- <li><a href="#">category</a>
                                     <ul class="single-dropdown">
                                         @foreach($categories_menu as $category_menu)
                                         <li><a
@@ -72,9 +72,9 @@
                                         </li>
                                         @endforeach
                                     </ul>
-                                </li>
+                                </li> -->
                                 <li>
-                                    <a href="{{ route('contact') }}">contact</a>
+                                    <a href="{{ route('contact') }}">Kontak</a>
                                 </li>
                             </ul>
                         </nav>
@@ -122,8 +122,8 @@
                                 </div>
                             </li>
                             <li class="cart-btn-wrapper">
-                                <a class="cart-btn btn-hover" href="{{ route('cart.index') }}">view cart</a>
-                                <a class="cart-btn btn-hover" href="{{ route('checkout.process') }}">checkout</a>
+                                <a class="cart-btn btn-hover" href="{{ route('cart.index') }}">Lihat keranjang</a>
+                                <a class="cart-btn btn-hover" href="{{ route('checkout.process') }}">pembayaran</a>
                             </li>
                         </ul>
                         @endif
@@ -135,12 +135,12 @@
                             <nav id="mobile-menu-active">
                                 <ul class="menu-overflow">
                                     <li>
-                                        <a href="#">HOME</a>
+                                        <a href="#">Beranda</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('shop.index') }}">shop</a>
+                                        <a href="{{ route('shop.index') }}">Toko</a>
                                     </li>
-                                    <li><a href="#">categories</a>
+                                    <li><a href="#">Kategori</a>
                                         <ul>
                                             @foreach($categories_menu as $category_menu)
                                             <li><a
@@ -149,7 +149,7 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li><a href="#"> Contact </a></li>
+                                    <li><a href="#"> Kontak </a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -163,8 +163,8 @@
                     <div class="furniture-login">
                         <ul>
                             @guest
-                            <li>Get Access: <a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li>Dapatkan Akses: <a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">Daftar</a></li>
                             @else
                             <li>Hello: <a href="{{ route('profile.index') }}">{{ auth()->user()->username }}</a></li>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -180,7 +180,7 @@
                     </div>
                     <div class="furniture-search">
                         <form>
-                            <input placeholder="I am Searching for . . ." type="text" name="q" autocomplete="off"
+                            <input placeholder="Saya sedang mencari . . ." type="text" name="q" autocomplete="off"
                                 id="search">
                             <button disabled>
                                 <i class="ti-search"></i>
@@ -190,11 +190,11 @@
                     <div class="furniture-wishlist">
                         <ul>
                             <li>
-                                <a href="{{ route('favorite.index') }}"><i class="ti-heart"></i> Favorites</a>
+                                <a href="{{ route('favorite.index') }}"><i class="ti-heart"></i> Favorit</a>
                             </li>
                             @auth
                             <li>
-                                <a href="{{ route('orders.index') }}"><i class="ti-money"></i> Orders</a>
+                                <a href="{{ route('orders.index') }}"><i class="ti-money"></i> Pesanan</a>
                             </li>
                             @endauth
                         </ul>
@@ -215,18 +215,17 @@
                 <div class="widget-wrapper">
                     <div class="footer-widget mb-30">
                         <img height="60" style="transform:scale(1.5);object-fit: cover;"
-                            src="{{ asset('frontend/assets/img/logo/logo.png') }}" alt="">
+                            src="{{ asset('frontend/assets/img/logo/logo1.png') }}" alt="">
                         <div class="footer-about-2">
-                            <p>There are many variations of passages of Lorem Ipsum <br>the majority have suffered
-                                alteration in some form, by <br> injected humour</p>
+                            <p></p>
                         </div>
                     </div>
                     <div class="footer-widget mb-30">
-                        <h3 class="footer-widget-title-5">Contact Info</h3>
+                        <h3 class="footer-widget-title-5">Info Kontak</h3>
                         <div class="footer-info-wrapper-3">
                             <div class="footer-address-furniture">
                                 <div class="footer-info-icon3">
-                                    <span>Address: </span>
+                                    <span>Alamat: </span>
                                 </div>
                                 <div class="footer-info-content3">
                                     <p>Jl. Arief Rahman Hakim No.32, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur 60111</p>
@@ -234,7 +233,7 @@
                             </div>
                             <div class="footer-address-furniture">
                                 <div class="footer-info-icon3">
-                                    <span>Phone: </span>
+                                    <span>Telepon: </span>
                                 </div>
                                 <div class="footer-info-content3">
                                     <p>(031) 5926020</p>
