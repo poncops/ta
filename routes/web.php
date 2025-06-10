@@ -43,6 +43,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('orders/checkout', [\App\Http\Controllers\OrderController::class, 'process'])->name('checkout.process');
     Route::get('orders/cities', [\App\Http\Controllers\OrderController::class, 'cities']);
     Route::post('orders/shipping-cost', [\App\Http\Controllers\OrderController::class, 'shippingCost']);
+    Route::post('orders/shipping-cost-courier', [\App\Http\Controllers\OrderController::class, 'shippingCostCourier']);
     Route::post('orders/set-shipping', [\App\Http\Controllers\OrderController::class, 'setShipping']);
     Route::post('orders/checkout', [\App\Http\Controllers\OrderController::class, 'checkout'])->name('checkout');
     Route::get('orders/received/{orderId}', [\App\Http\Controllers\OrderController::class, 'received'])->name('checkout.received');

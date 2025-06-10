@@ -54,7 +54,7 @@
                                 <input type="text" name="address2" value="{{ auth()->user()->address2}}" placeholder="Apartemen, Kantor, dll. (opsional)...">
 								</div>
 							</div>
-							<div class="col-md-12">
+							<div class="col-md-6">
 								<div class="checkout-form-list">
 									<label>Provinsi<span class="required">*</span></label>
 									<select name="province_id"id="province-id" value="{{ auth()->user()->province_id }}">
@@ -72,6 +72,17 @@
 											@foreach($cities as $id => $city)
 											<option {{ auth()->user()->city_id == $id ? 'selected' : null }} value="{{ $id }}">{{ $city }}</option>
 											@endforeach
+                                 	</select> 
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="checkout-form-list">
+									<label>Kurir<span class="required">*</span></label>
+									<select name="courir_code" id="courier-code" value="" >
+										<option value="">- Please Select -</option>
+										@foreach($courier as $id => $c)
+										<option value="{{ $id }}">{{ $c }}</option>
+										@endforeach
                                  	</select> 
 								</div>
 							</div>
