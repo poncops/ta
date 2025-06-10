@@ -38,8 +38,9 @@ class OrderController extends Controller
 		}
 
 		$rekenings = Rekening::get(['id', 'bank_name', 'acc_number', 'name']);
+		$courier = $this->couriers;
 
-		return view('frontend.orders.checkout', compact('items','totalWeight', 'provinces', 'cities', 'rekenings'));
+		return view('frontend.orders.checkout', compact('items','totalWeight', 'provinces', 'cities', 'rekenings', 'courier'));
 	}
 
 	public function cities(Request $request)
@@ -48,6 +49,7 @@ class OrderController extends Controller
 		return response()->json(['cities' => $cities]);
 	}
 	
+	// get shipping cost all courier
 	public function shippingCost(Request $request)
 	{
 		$items = \Cart::getContent();
@@ -60,7 +62,23 @@ class OrderController extends Controller
         $destination = $request->input('city_id');
 		return $this->getShippingCost($destination, $totalWeight);
 	}
+
+	// get shipping cost by courier
+	public function shippingCostCourier(Request $request)
+	{
+		$items = \Cart::getContent();
+
+        $totalWeight = 0;
+		foreach ($items as $item) {
+			$totalWeight += ($item->quantity * $item->associatedModel->weight);
+		}
+
+        $destination = $request->input('city_id');
+        $courier = $request->input('courier');
+		return $this->getShippingCostCourier($destination, $totalWeight, $courier);
+	}
 	
+	// get shipping cost all courier
 	private function getShippingCost($destination, $weight)
 	{
 		$params = [
@@ -103,7 +121,51 @@ class OrderController extends Controller
 			'weight' => $weight,
 			'results' => $results,
 		];
-		
+
+		return $response;
+	}
+
+	// get shipping cost by courier
+	private function getShippingCostCourier($destination, $weight, $courier)
+	{
+		$params = [
+			'origin' => env('RAJAONGKIR_ORIGIN'),
+			'destination' => $destination,
+			'weight' => $weight,
+			'courier' => $courier,
+		];
+
+		$results = [];
+		$response = $this->rajaOngkirRequest('cost', $params, 'POST');
+
+		if (!empty($response['rajaongkir']['results'])) {
+			foreach ($response['rajaongkir']['results'] as $cost) {
+				if (!empty($cost['costs'])) {
+					foreach ($cost['costs'] as $costDetail) {
+						$serviceName = strtoupper($cost['code']) .' - '. $costDetail['service'];
+						$costAmount = $costDetail['cost'][0]['value'];
+						$etd = $costDetail['cost'][0]['etd'];
+
+						$result = [
+							'service' => $serviceName,
+							'cost' => $costAmount,
+							'etd' => $etd,
+							'courier' => $courier,
+						];
+
+						$results[] = $result;
+					}
+				}
+			}
+		}
+
+		$response = [
+			'origin' => $params['origin'],
+			'destination' => $destination,
+			'weight' => $weight,
+			'results' => $results,
+		];
+
 		return $response;
 	}
 

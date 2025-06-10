@@ -1,10 +1,11 @@
-function getShippingCostOptions(city_id) {
+function getShippingCostOptions(city_id, courier) {
     $.ajax({
         type: "POST",
-        url: "/orders/shipping-cost",
+        url: "/orders/shipping-cost-courier",
         data: {
             _token: $('meta[name="csrf-token"]').attr("content"),
             city_id: city_id,
+            courier: courier
         },
         success: function (response) {
             $("#shipping-cost-option").empty();
@@ -20,9 +21,9 @@ function getShippingCostOptions(city_id) {
                         '">' +
                         result.service +
                         " | " +
-                        result.cost +
+                        "Ongkir : " + result.cost +
                         " | " +
-                        result.etd +
+                        "Estimasi : " + result.etd + " Hari" +
                         "</option>"
                 );
             });
@@ -78,16 +79,44 @@ function getQuickView(product_slug) {
     });
 
     // ======= Show Shipping Cost Options =========
-    if ($("#city-id").val()) {
-        getShippingCostOptions($("#city-id").val());
+    if ($("#courier-code").val()) {
+        let city_id = $("#city-id").val();
+        let courier_code = $("#courier-code").val();
+        getShippingCostOptions(city_id, courier_code);
     }
+
+    $("#courier-code").on("change", function (e) {
+        let city_id = $("#city-id").val();
+        let courier_code = e.target.value;
+        if (!city_id) {
+            alert("Harap pilih kota terlebih dahulu !");
+            return;
+        }
+
+        if (!courier_code) {
+            return;
+        }
+
+        $("#test").val("Loading...");
+        if (!$("#ship-box").is(":checked")) {
+            getShippingCostOptions(city_id, courier_code);
+        }
+    });
+
+    // if ($("#city-id").val()) {
+    //     getShippingCostOptions($("#city-id").val());
+    // }
 
     $("#city-id").on("change", function (e) {
         var city_id = e.target.value;
-        $("#test").val("Loading...");
+        var courier_code = $("#courier-code").val();
+        if (!courier_code || !city_id) {
+            return;
+        }
 
+        $("#test").val("Loading...");
         if (!$("#ship-box").is(":checked")) {
-            getShippingCostOptions(city_id);
+            getShippingCostOptions(city_id, courier_code);
         }
     });
 
